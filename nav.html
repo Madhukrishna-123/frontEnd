@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Application</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="../css/nav.css">
+   
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- Menu Toggle Button -->
+        <button class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- User Greeting -->
+        <span class="user-greeting" id="user-greeting">Hello, Guest</span>
+        <!-- Left Empty for Menu Toggle -->
+        <span class="navbar-brand">Ecommerce Application</span>
+
+        <!-- Center Title (Ecommerce Application) -->
+        <div class="ml-auto d-flex align-items-center">
+            <!-- Cart Icon (Redirect to Cart Page) -->
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart cart-icon"></i>
+            </a>
+
+            <!-- Account Icon -->
+            <button class="btn btn-outline-light ml-2" id="account-button">
+                <i class="fas fa-user"></i> <!-- Account Icon -->
+            </button>
+        </div>
+    </nav>
+
+    <!-- Sidebar (Filters) -->
+    <div id="sidebar">
+        <button id="close-btn" class="menu-toggle">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="#">Filters</a></li>
+            <li><a href="#">Brands</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Price Range</a></li>
+            <li><a href="#">Ratings</a></li>
+            <li><a href="#">More</a></li>
+        </ul>
+    </div>
+
+    <!-- Account Menu (Below Navbar) -->
+    <div id="account-menu">
+        <div class="d-flex align-items-center">
+            <!-- Profile Picture (Initials from First and Last Name) -->
+            <div class="profile-pic" id="profile-pic"></div>
+            <span id="account-name" class="text-white"></span>
+        </div>
+        <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">My Orders</a></li>
+            <li><a href="#">My Cart</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><button id="logout-btn" class="btn btn-link text-white">Log Out</button></li> <!-- Logout Button -->
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="page-title">Welcome to Our E-Commerce Store!</h1>
+        <!-- Other content here -->
+
+    </div>
+
+    <!-- JS Scripts -->
+    <script>
+       
+    </script>
+    <script src="./js/nav.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

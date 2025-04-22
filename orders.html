@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Application</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<!-- <link rel="stylesheet" href="../css/nav.css"> -->
+<link rel="stylesheet" href="../css/style.css">
+   
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- Menu Toggle Button -->
+        <button class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- User Greeting -->
+        <span class="user-greeting" id="user-greeting">Hello, Guest</span>
+        <!-- Left Empty for Menu Toggle -->
+        <span class="navbar-brand">Ecommerce Application</span>
+
+        <!-- Center Title (Ecommerce Application) -->
+        <div class="ml-auto d-flex align-items-center">
+            <!-- Cart Icon (Redirect to Cart Page) -->
+            <a href="cart.html" onclick="loadCart()">
+                <i class="fas fa-shopping-cart cart-icon"></i>
+            </a>
+
+            <!-- Account Icon -->
+            <button class="btn btn-outline-light ml-2" id="account-button">
+                <i class="fas fa-user"></i> <!-- Account Icon -->
+            </button>
+        </div>
+    </nav>
+
+    <!-- Sidebar (Filters) -->
+    <div id="sidebar">
+        <button id="close-btn" class="menu-toggle">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="#">Filters</a></li>
+            <li><a href="#">Brands</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Price Range</a></li>
+            <li><a href="#">Ratings</a></li>
+            <li><a href="#">More</a></li>
+        </ul>
+    </div>
+
+    <!-- Account Menu (Below Navbar) -->
+    <div id="account-menu">
+        <div class="d-flex align-items-center">
+            <!-- Profile Picture (Initials from First and Last Name) -->
+            <div class="profile-pic" id="profile-pic"></div>
+            <span id="account-name" class="text-white"></span>
+        </div>
+        <ul>
+            <li><a href="#" class="myAccount">My Account</a></li>
+            <li><a href="./orders.html" class="myOrders">My Orders</a></li>
+            <li><a href="./cart.html" class="myCart">My Cart</a></li>
+            <li><a href="#" class="">Messages</a></li>
+            <li><a href="#" class="">Notifications</a></li>
+            <li><button id="logout-btn" class="btn btn-link text-white">Log Out</button></li> <!-- Logout Button -->
+        </ul>
+    </div>
+
+        <!-- Main Content -->
+        <!-- <div class="container"> -->
+        
+            <div class="container mt-5">
+                <h2 class="mb-4">Your Orders</h2>
+                <div id="orders-container"></div>
+            </div>
+        
+            <!-- Orders Template -->
+            <template id="order-template">
+                <div class="order-card mb-4 p-3 border bg-light">
+                    <h4>Order ID: <span class="order-id"></span></h4>
+                    <p>Status: <span class="order-status"></span></p>
+                    <p>Total: $<span class="order-total"></span></p>
+                    <p>Date: <span class="order-date"></span></p>
+                    <div class="products mt-3"></div>
+                </div>
+            </template>
+        
+            <!-- Product inside Order Template -->
+            <template id="order-product-template">
+                <div class="product mb-2 p-2 border bg-white d-flex align-items-center">
+                    <img src="" class="mr-3" alt="Product Image" width="100">
+                    <div>
+                        <h5 class="product-name"></h5>
+                        <p class="product-category"></p>
+                        <p><strong>Price:</strong> $<span class="product-price"></span></p>
+                        <p class="product-description"></p>
+                    </div>
+                </div>
+            </template>
+
+
+        <!-- </div> -->
+
+    <script src="./js/nav.js"></script>
+    <script src="./js/product.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/place.js"></script>
+    <script src="./js/order.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
