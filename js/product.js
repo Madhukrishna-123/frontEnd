@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Fetch Products and Render
 function fetchProducts() {
-    fetch("http://9bf0-45-127-59-91.ngrok-free.app/api/products")
+    fetch("https://9bf0-45-127-59-91.ngrok-free.app/api/products")
         .then(response => response.json())
         .then(products => {
             const productList = document.getElementById("product-list");
